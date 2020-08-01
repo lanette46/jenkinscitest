@@ -60,24 +60,24 @@ public class Passenger {
         return flight;
     }
 
-//    public void joinFlight(Flight flight) {
-//        Flight previousFlight = this.flight;
-//        if (null != previousFlight) {
-//            if (!previousFlight.removePassenger(this)) {
-//                throw new RuntimeException("Cannot remove passenger");
-//            }
-//        }
-//        setFlight(flight);
-//        if (null != flight) {
-//            if (!flight.addPassenger(this)) {
-//                throw new RuntimeException("Cannot add passenger");
-//            }
-//        }
-//    }
-//
-//    public void setFlight(Flight flight) {
-//        this.flight = flight;
-//    }
+    public void joinFlight(Flight flight) {
+        Flight previousFlight = this.flight;
+        if (null != previousFlight) {
+            if (!previousFlight.removePassenger(this)) {
+                throw new RuntimeException("Cannot remove passenger");
+            }
+        }
+        setFlight(flight);
+        if (null != flight) {
+            if (!flight.addPassenger(this)) {
+                throw new RuntimeException("Cannot add passenger");
+            }
+        }
+    }
+
+    public void setFlight(Flight flight) {
+        this.flight = flight;
+    }
 
     @Override
     public String toString() {
